@@ -1,0 +1,23 @@
+.progress[value] {
+    --color: #528BFD;
+    --background: white;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    width: 446px;
+    height: 4px;
+    background: var(--background);
+}
+
+.progress[value]::-webkit-progress-bar {
+    background: var(--background);
+}
+
+.progress[value]::-webkit-progress-value {
+    background: var(--color);
+}
+
+.progress[value]::-moz-progress-bar {
+    background: var(--color);
+}

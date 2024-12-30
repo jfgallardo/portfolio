@@ -1,0 +1,45 @@
+{
+    "navbar": {
+        "home": "INÍCIO",
+        "services": "SERVIÇOS",
+        "about": "SOBRE MIM",
+        "skills": "HABILIDADES",
+        "clients": "CLIENTES",
+        "contacts": "CONTATO"
+    },
+    "home": {
+        "title": "Sou Julio Fuentes Gallardo",
+        "subtitle": "Sou um engenheiro de software com paixão em criar soluções inovadoras que fazem uma diferença no mundo."
+    },
+    "services": {
+        "title": "Meus serviços",
+        "apiDeveloping": "Desenvolvimento de APIs",
+        "webDeveloping": "Desenvolvimento de sites",
+        "coding": "Desenvolvimento de código",
+        "description": "Design e desenvolvimento de APIs robustas para conectar aplicativos de maneira eficiente e segura.",
+        "description2": "Criação de sites web interativos e otimizados que oferecem experiências de usuário excepcionais.",
+        "description3": "Resolução de problemas e construção de soluções inovadoras através de código limpo e eficiente.",
+        "button": "Saber mais"
+    },
+    "about": {
+        "greeting": "Olá",
+        "title": "Sobre mim",
+        "description": "Sou um engenheiro de software com paixão em criar soluções inovadoras que fazem uma diferença no mundo. Trabalho com tecnologias modernas como React Js, Vue Js, Node Js, Laravel, Nest Js e TypeScript. Sou apaixonado por criar interfaces de usuário intuitivas e intuitivas que são fáceis de usar e entender.",
+        "name": "Nome",
+        "phone": "Telefone",
+        "email": "Email",
+        "linkedin": "Linkedin",
+        "curriculum": "Currículo"
+    },
+    "skills": {
+        "title": "Minhas habilidades",
+        "headText": "Vamos trabalhar juntos no seu próximo projeto!",
+        "bodyText": "CONTRATE-ME AGORA",
+        "contact": "Contacte-me"
+    },
+    "clients": {
+        "title": "Testimonials",
+        "subtitle": "Cada projeto é uma colaboração, e essas experiências refletem o impacto que podemos alcançar juntos.",
+        "testimonial_1": "Excelente atendimento, entendeu nossas necessidades e entregou exatamente o que procurávamos. Recomendado!"
+    }
+}

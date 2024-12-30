@@ -1,0 +1,45 @@
+{
+    "navbar": {
+        "home": "INICIO",
+        "services": "SERVICIOS",
+        "about": "SOBRE MI",
+        "skills": "HABILIDADES",
+        "clients": "CLIENTES",
+        "contacts": "CONTACTO"
+    },
+    "home": {
+        "title": "Soy Julio Fuentes Gallardo",
+        "subtitle": "Soy un ingeniero de software con pasión por crear soluciones innovadoras que hagan una diferencia en el mundo."
+    },
+    "services": {
+        "title": "Mis servicios",
+        "apiDeveloping": "Desarrollo de APIs",
+        "webDeveloping": "Desarrollo de sitios web",
+        "coding": "Desarrollo de código",
+        "description": "Diseño y desarrollo de APIs robustas para conectar aplicaciones de manera eficiente y segura.",
+        "description2": "Creación de sitios web interactivos y optimizados que brindan experiencias excepcionales a los usuarios.",
+        "description3": "Resolución de problemas y construcción de soluciones innovadoras a través de código limpio y eficiente.",
+        "button": "Saber más"
+    },
+    "about": {
+        "greeting": "Hola",
+        "title": "Sobre mi",
+        "description": "Soy un ingeniero de software con pasión por crear soluciones innovadoras que hagan una diferencia en el mundo. Trabajo con tecnologías modernas como React Js, Vue Js, Node Js, Laravel, Nest Js y TypeScript. Soy apasionado por crear interfaces de usuario intuitivas y intuitivas que son fáciles de usar y entender.",
+        "name": "Nombre",
+        "phone": "Teléfono",
+        "email": "Email",
+        "linkedin": "Linkedin",
+        "curriculum": "Historial profesional"
+    },
+    "skills": {
+        "title": "Mis habilidades",
+        "headText": "¡Trabajemos juntos en tu próximo proyecto!",
+        "bodyText": "CONTRATAME AHORA",
+        "contact": "Contáctame"
+    },
+    "clients": {
+        "title": "Testimonios",
+        "subtitle": "Cada proyecto es una colaboración, y estas experiencias reflejan el impacto que podemos lograr juntos.",
+        "testimonial_1": "Excelente servicio, entendió nuestras necesidades y entregó justo lo que buscábamos. ¡Recomendado!"
+    }
+}

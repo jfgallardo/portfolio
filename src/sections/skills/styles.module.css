@@ -1,0 +1,26 @@
+
+.skillsContainer {
+    display: flex;
+    flex-direction: column;
+    width: 468px;
+    height: 383px;
+    gap: 32px;
+    overflow-y: scroll;
+    /* Permite desplazamiento vertical */
+    scrollbar-width: none;
+    /* Oculta el scrollbar en Firefox */
+
+    &::-webkit-scrollbar {
+        display: none;
+        /* Oculta el scrollbar en Chrome y Safari */
+    }
+}
+
+@media (max-width: 768px) {
+    .skillsContainer {
+        width: 100%;
+        /* Ajusta el ancho al tamaño del dispositivo */
+        height: auto;
+        /* Permite un desplazamiento fluido en móvil */
+    }
+}

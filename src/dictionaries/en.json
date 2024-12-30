@@ -1,0 +1,45 @@
+{
+    "navbar": {
+        "home": "HOME",
+        "services": "SERVICES",
+        "about": "ABOUT ME",
+        "skills": "SKILLS",
+        "clients": "CLIENTS",
+        "contacts": "CONTACT"
+    },
+    "home": {
+        "title": "I am Julio Fuentes Gallardo",
+        "subtitle": "I am a software engineer with a passion for creating innovative solutions that make a difference in the world."
+    },
+    "services": {
+        "title": "My services",
+        "apiDeveloping": "API Developing",
+        "webDeveloping": "Web Developing",
+        "coding": "Coding",
+        "description": "Design and development of robust APIs to connect applications efficiently and securely.",
+        "description2": "Creating interactive and optimized websites that deliver exceptional user experiences.",
+        "description3": "Problem solving and building innovative solutions through clean and efficient code.",
+        "button": "Learn More"
+    },
+    "about": {
+        "greeting": "Hi there",
+        "title": "About me",
+        "description": "I am a software engineer with a passion for creating innovative solutions that make a difference in the world. I work with modern technologies like React Js, Vue Js, Node Js, Laravel, Nest Js and TypeScript. I am passionate about creating intuitive and intuitive user interfaces that are easy to use and understand.",
+        "name": "Name",
+        "phone": "Phone",
+        "email": "Email",
+        "linkedin": "Linkedin",
+        "curriculum": "Curriculum"
+    },
+    "skills": {
+        "title": "My skills",
+        "headText": "Let’s Work Together On Your Next Project!",
+        "bodyText": "HIRE ME NOW",
+        "contact": "Contact me"
+    },
+    "clients": {
+        "title": "Testimonials",
+        "subtitle": "Each project is a collaboration, and these experiences reflect the impact we can achieve together.",
+        "testimonial_1": "Excellent service, understood our needs and delivered exactly what we were looking for. Recommended!"
+    }
+}
