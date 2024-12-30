@@ -13,7 +13,7 @@ export default function SocialMediaButtons() {
   ];
 
   return (
-    <div className='flex gap-8 w-[448px] h-[64px] pt-[151px] z-[1]'>
+    <div className='flex gap-8 md:w-[448px] md:h-[64px] sm:pt-[30px] md:pt-[151px] z-[1] '>
       {socialMedias.map((item) => (
         <a href={item.href} key={item.name} target="_blank" rel="noreferrer">
           <Image className='hover:cursor-pointer' src={item.src} alt="" width={64} height={64} />

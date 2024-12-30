@@ -10,36 +10,39 @@ type Props = {
 export default function LandingHomeView({ translations }: Props) {
 
   return (
-    <div id='home' className='flex justify-end items-center bg-[#080922] w-full'>
-
-      <div className="w-full max-w-[1400px]">
-        <p className='absolute inset-0 text-white opacity-10 text-[250px] font-bold top-[254px] left-[130px] hover:opacity-20'>
+    <div id="home" className="flex justify-center items-center bg-[#080922] w-full px-4 py-10">
+      <div className="w-full max-w-[1400px] relative">
+        {/* Textos grandes de fondo */}
+        <p className="absolute inset-0 text-white opacity-10 text-[100px] sm:text-[100px] md:text-[200px] lg:text-[250px] font-bold top-[200px] left-[50px] sm:top-[400px] sm:left-[130px] hover:opacity-20">
           Julio
         </p>
-        <p className='absolute inset-0 text-white opacity-10 text-[250px] font-bold top-[523px] left-[194px] hover:opacity-20'>
+        <p className="absolute inset-0 text-white opacity-10 text-[100px] sm:text-[100px] md:text-[200px] lg:text-[250px] font-bold top-[400px] left-[100px] sm:top-[523px] sm:left-[194px] hover:opacity-20">
           Gallardo
         </p>
-        <SocialMediaButtons />
-        <div className='flex items-center justify-between text-white'>
 
-          <div className='flex flex-col justify-evenly w-[586px] h-[268px]'>
-            <p className='font-sans font-semibold text-[48px] leading-10'>{translations.home.title}
+        {/* Botones de redes sociales */}
+        <SocialMediaButtons />
+
+        {/* Contenido principal */}
+        <div className="flex flex-col md:flex-row items-center justify-between text-white mt-10 md:mt-0">
+          {/* Texto */}
+          <div className="flex flex-col justify-evenly w-full md:w-[50%] h-auto md:h-[268px] text-center md:text-left">
+            <p className="font-sans font-semibold text-[32px] sm:text-[40px] md:text-[48px] leading-10">
+              {translations.home.title}
             </p>
-            <p className='leading-6'>
+            <p className="leading-6 text-sm sm:text-base">
               {translations.home.subtitle}
             </p>
           </div>
 
-          <div className='w-[666.97px] h-[852px]'>
-            <Image src={Photo} alt="Photo home" />
+          {/* Imagen */}
+          <div className="w-full md:w-[50%] max-w-[400px] sm:max-w-[500px] md:max-w-[666.97px] h-auto md:h-[852px] mt-6 md:mt-0">
+            <Image src={Photo} alt="Photo home" className="w-full h-auto object-cover" />
           </div>
-
         </div>
       </div>
-
-
-
     </div>
+
   )
 
 }

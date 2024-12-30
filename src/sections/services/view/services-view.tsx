@@ -22,29 +22,37 @@ export default function ServicesView({ translations }: Props) {
     ]
 
     return (
-        <div className={`flex flex-col items-center p-8 bg-cover bg-center bg-no-repeat w-full ${styles.background}`} id='services'>
-
+        <div
+            className={`flex flex-col items-center p-8 bg-cover bg-center bg-no-repeat w-full ${styles.background}`}
+            id="services"
+        >
             <div className="w-full max-w-[1400px]">
-                <h1 className='text-[48px] font-semibold leading-[79px] text-center text-[#528BFD] mb-4'>{translations.services.title}</h1>
+                {/* Título */}
+                <h1 className="text-[28px] sm:text-[36px] md:text-[48px] font-semibold leading-[1.2] text-center text-[#528BFD] mb-6">
+                    {translations.services.title}
+                </h1>
 
-                <div className=''>
-                    <div className='flex justify-center items-center gap-8 w-full'>
-                        {cardsItems.map((item, index) => (
-                            <Card
-                                key={index}
-                                title={item.title}
-                                description={item.description}
-                                buttonText={item.buttonText}
-                            >
-                                <Image src={item.icon} alt="" width={128} height={128} />
-                            </Card>
-                        ))}
-
-                    </div>
+                {/* Contenedor de las tarjetas */}
+                <div className="flex flex-wrap justify-center items-center gap-6 sm:gap-8 w-full">
+                    {cardsItems.map((item, index) => (
+                        <Card
+                            key={index}
+                            title={item.title}
+                            description={item.description}
+                            buttonText={item.buttonText}
+                        >
+                            <Image
+                                src={item.icon}
+                                alt={item.title}
+                                width={80}
+                                height={80}
+                                className="sm:w-[96px] sm:h-[96px] md:w-[128px] md:h-[128px]"
+                            />
+                        </Card>
+                    ))}
                 </div>
             </div>
-
-
         </div>
+
     )
 }
