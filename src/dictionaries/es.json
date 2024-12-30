@@ -41,5 +41,13 @@
         "title": "Testimonios",
         "subtitle": "Cada proyecto es una colaboración, y estas experiencias reflejan el impacto que podemos lograr juntos.",
         "testimonial_1": "Excelente servicio, entendió nuestras necesidades y entregó justo lo que buscábamos. ¡Recomendado!"
+    },
+    "contact": {
+        "title": "Envíame un mensaje",
+        "name": "Nombre *",
+        "email": "Correo electrónico *",
+        "subject": "Asunto *",
+        "message": "Mensaje *",
+        "send": "Enviar"
     }
 }

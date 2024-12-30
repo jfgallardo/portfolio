@@ -51,6 +51,14 @@ export const fetchTranslations = async (lang: langParam) => {
       title: dict.clients.title,
       subtitle: dict.clients.subtitle,
       testimonial_1: dict.clients.testimonial_1
+    },
+    contact: {
+      title: dict.contact.title,
+      name: dict.contact.name,
+      email: dict.contact.email,
+      subject: dict.contact.subject,
+      message: dict.contact.message,
+      send: dict.contact.send
     }
   };
 };

@@ -1,7 +1,6 @@
 import { useState } from "react";
 import CarouselSlide from "./carousel-slide";
 import CarouselControls from "./carousel-controls";
-import CarouselIndicators from "./carousel-indicators";
 import { Testimonial } from "@/types/types";
 
 type Props = {
