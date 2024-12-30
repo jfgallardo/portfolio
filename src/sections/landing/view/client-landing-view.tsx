@@ -60,7 +60,7 @@ export default function ClientLandingView({ menuItems, translations }: Props) {
       <LandingHomeView translations={translations} />
       <ServicesView translations={translations} />
       <AboutView translations={translations} />
-      <SkillsView translations={translations} />
+      <SkillsView translations={translations} onClick={handleClick}/>
       <TestimonialsView translations={translations}/>
       <ContactView translations={translations}/>
     </>

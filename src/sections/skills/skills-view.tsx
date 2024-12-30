@@ -4,7 +4,8 @@ import Skill from "@/components/skill/skill";
 import styles from "./styles.module.css";
 
 type Props = {
-    translations: Dictionary
+    translations: Dictionary;
+    onClick: (item: string) => void;
 };
 
 const skills: SkillType[] = [
@@ -35,7 +36,7 @@ const skills: SkillType[] = [
 
 ];
 
-export function SkillsView({ translations }: Props) {
+export function SkillsView({ translations, onClick }: Props) {
     return (
         <div className="bg-[#020312] flex flex-col items-center p-8 w-full" id="skills">
             <div className="w-full max-w-[1400px]">
@@ -59,6 +60,7 @@ export function SkillsView({ translations }: Props) {
                             variant="secondary"
                             size="lg"
                             className="w-full md:w-auto text-white font-extrabold text-lg sm:text-xl border border-[#528BFD] rounded-lg px-6 py-3"
+                            onClick={() => onClick("contact") }
                         >
                             {translations.skills.contact}
                         </Button>
