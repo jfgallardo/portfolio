@@ -44,8 +44,6 @@ export default function ServicesView({ translations }: Props) {
                             <Image
                                 src={item.icon}
                                 alt={item.title}
-                                width={80}
-                                height={80}
                                 className="sm:w-[96px] sm:h-[96px] md:w-[128px] md:h-[128px]"
                             />
                         </Card>

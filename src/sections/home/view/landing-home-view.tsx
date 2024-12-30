@@ -13,10 +13,10 @@ export default function LandingHomeView({ translations }: Props) {
     <div id="home" className="flex justify-center items-center bg-[#080922] w-full px-4 py-10">
       <div className="w-full max-w-[1400px] relative">
         {/* Textos grandes de fondo */}
-        <p className="absolute inset-0 text-white opacity-10 text-[100px] sm:text-[100px] md:text-[200px] lg:text-[250px] font-bold top-[200px] left-[50px] sm:top-[400px] sm:left-[130px] hover:opacity-20">
+        <p className="absolute inset-0 text-white opacity-10 text-[100px] sm:hidden  md:text-[200px] lg:text-[250px] font-bold md:top-[200px] md:left-[50px] hover:opacity-20">
           Julio
         </p>
-        <p className="absolute inset-0 text-white opacity-10 text-[100px] sm:text-[100px] md:text-[200px] lg:text-[250px] font-bold top-[400px] left-[100px] sm:top-[523px] sm:left-[194px] hover:opacity-20">
+        <p className="absolute inset-0 text-white opacity-10 text-[100px] sm:hidden  md:text-[200px] lg:text-[250px] font-bold md:top-[400px] md:left-[100px]  hover:opacity-20">
           Gallardo
         </p>
 
