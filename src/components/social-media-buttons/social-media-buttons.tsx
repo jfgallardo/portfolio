@@ -13,10 +13,10 @@ export default function SocialMediaButtons() {
   ];
 
   return (
-    <div className='flex gap-8 md:w-[448px] md:h-[64px] sm:pt-[30px] md:pt-[151px] z-[1] '>
+    <div className='flex justify-center md:justify-normal gap-8 md:w-[448px] md:h-[64px] pt-8 md:pt-[151px] z-[1] '>
       {socialMedias.map((item) => (
         <a href={item.href} key={item.name} target="_blank" rel="noreferrer">
-          <Image className='hover:cursor-pointer' src={item.src} alt="" width={64} height={64} />
+          <Image className='hover:cursor-pointer w-12 h-12 md:w-[64px] md:h-[64px]' src={item.src} alt="" />
         </a>
       ))}
     </div>

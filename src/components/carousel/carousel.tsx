@@ -4,11 +4,11 @@ import CarouselControls from "./carousel-controls";
 import { Testimonial } from "@/types/types";
 
 type Props = {
-    slides: Testimonial[];
+  slides: Testimonial[];
 };
 
 export default function Carousel({ slides }: Props) {
-    const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(0);
 
   const handleNext = () => {
     setActiveIndex((prevIndex) => (prevIndex + 1) % slides.length);
@@ -21,7 +21,7 @@ export default function Carousel({ slides }: Props) {
   };
 
   return (
-    <div className="relative w-4/5 overflow-hidden bg-transparent shadow-lg rounded-lg">
+    <div className="relative w-full max-w-[1200px] mx-auto overflow-hidden bg-transparent shadow-lg rounded-lg">
       <div
         className="flex transition-transform ease-in-out duration-500"
         style={{ transform: `translateX(-${activeIndex * 100}%)` }}
@@ -30,7 +30,13 @@ export default function Carousel({ slides }: Props) {
           <CarouselSlide key={index} content={slide} />
         ))}
       </div>
-      <CarouselControls onNext={handleNext} onPrev={handlePrev} />
+
+      {/* Controles del carrusel */}
+      <CarouselControls
+        onNext={handleNext}
+        onPrev={handlePrev}
+      />
     </div>
+
   );
 }

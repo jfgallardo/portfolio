@@ -7,13 +7,17 @@ type Props = {
 
 export default function Skill({ value, skill }: Props) {
     return (
-        <div className='flex flex-col items-center text-white w-[468px] gap-[15px]'>
-            <div className='flex items-center justify-between gap-4 w-full 
-                            leading-[11px] text-center'>
-                <p>{skill}</p>
-                <p>{value}%</p>
+        <div className='flex flex-col items-center text-white w-full max-w-[468px] gap-4 sm:gap-6 md:gap-8'>
+            <div className='flex items-center justify-between gap-4 w-full text-center'>
+                <p className='text-sm sm:text-base md:text-lg'>{skill}</p>
+                <p className='text-sm sm:text-base md:text-lg'>{value}%</p>
             </div>
-            <progress className={`${styles.progress} `} value={value} max="100"></progress>
+            <progress
+                className={`w-full h-2 sm:h-3 md:h-4 bg-gray-700 rounded-md ${styles.progress}`}
+                value={value}
+                max="100">
+            </progress>
         </div>
+
     )
 }
