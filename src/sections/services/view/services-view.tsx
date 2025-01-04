@@ -5,6 +5,7 @@ import IconWeb from '@/public/icons/icon_services_developing.svg'
 import Image from 'next/image'
 import { CardItem, Dictionary } from '@/types/types'
 import styles from './styles.module.css'
+import { useEffect, useRef, useState } from 'react'
 
 
 type Props = {
@@ -21,12 +22,41 @@ export default function ServicesView({ translations }: Props) {
         { title: translations.services.coding, description: translations.services.description3, buttonText: translations.services.button, icon: IconCoding },
     ]
 
+    const [isVisible, setIsVisible] = useState(false);
+    const sectionServicesRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        setIsVisible(true);
+                    }
+                });
+            },
+            { threshold: 0.2 } // Detectar cuando el 20% del componente esté visible
+        );
+
+        if (sectionServicesRef.current) {
+            observer.observe(sectionServicesRef.current);
+        }
+
+        return () => {
+            if (sectionServicesRef.current) {
+                observer.unobserve(sectionServicesRef.current);
+            }
+        };
+    }, []);
+
     return (
         <div
             className={`flex flex-col items-center p-8 bg-cover bg-center bg-no-repeat w-full ${styles.background}`}
             id="services"
         >
-            <div className="w-full max-w-[1400px]">
+            <div
+                ref={sectionServicesRef}
+                className={`w-full max-w-[1400px] transition-transform duration-1000 transform ${isVisible ? "opacity-100 translate-y-0" : "translate-y-16"
+                    }`}>
                 {/* Título */}
                 <h1 className="text-[28px] sm:text-[36px] md:text-[48px] font-semibold leading-[1.2] text-center text-[#528BFD] mb-6">
                     {translations.services.title}

@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Photo from '@/public/images/3.png'
 import Button from '@/components/button/button';
 import { Dictionary } from '@/types/types';
+import { useEffect, useRef, useState } from 'react';
 
 
 type Props = {
@@ -10,16 +11,44 @@ type Props = {
 
 export default function AboutView({ translations }: Props) {
 
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef<HTMLDivElement>(null);
+
   const downloadCurriculum = () => {
     window.open('https://drive.google.com/file/d/1bFsJWfaguWMmWTyYWI5AbzTVajnPSFFp/view?usp=drivesdk', '_blank');
   }
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+          }
+        });
+      },
+      { threshold: 0.2 } // Detectar cuando el 20% del componente esté visible
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
   return (
     <div
       id="about"
-      className="flex flex-col items-center p-8 bg-[#080922] w-full"
+      className={`flex flex-col items-center p-8 bg-[#080922] w-full`}
     >
-      <div className="w-full max-w-[1400px]">
+      <div ref={sectionRef}
+        className={`w-full max-w-[1400px] transition-transform duration-1000 transform ${isVisible ? "opacity-100 translate-y-0" : "translate-y-16"
+          }`} >
         {/* Título */}
         <h1 className="text-[28px] sm:text-[36px] md:text-[48px] font-semibold leading-[1.2] text-center text-[#528BFD] mb-6">
           {translations.about.title}

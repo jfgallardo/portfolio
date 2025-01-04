@@ -2,6 +2,7 @@ import type { Dictionary, SkillType } from "@/types/types";
 import Button from "@/components/button/button";
 import Skill from "@/components/skill/skill";
 import styles from "./styles.module.css";
+import { useEffect, useRef, useState } from "react";
 
 type Props = {
     translations: Dictionary;
@@ -36,10 +37,41 @@ const skills: SkillType[] = [
 
 ];
 
+
 export function SkillsView({ translations, onClick }: Props) {
+
+    const [isVisible, setIsVisible] = useState(false);
+    const sectionSkillsRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        setIsVisible(true);
+                    }
+                });
+            },
+            { threshold: 0.2 } // Detectar cuando el 20% del componente esté visible
+        );
+
+        if (sectionSkillsRef.current) {
+            observer.observe(sectionSkillsRef.current);
+        }
+
+        return () => {
+            if (sectionSkillsRef.current) {
+                observer.unobserve(sectionSkillsRef.current);
+            }
+        };
+    }, []);
+
     return (
         <div className="bg-[#020312] flex flex-col items-center p-8 w-full" id="skills">
-            <div className="w-full max-w-[1400px]">
+            <div
+                ref={sectionSkillsRef}
+                className={`w-full max-w-[1400px] transition-transform duration-1000 transform ${isVisible ? "opacity-100 translate-y-0" : "translate-y-16"
+                    }`}>
                 {/* Título */}
                 <h1 className="text-[28px] sm:text-[36px] md:text-[48px] font-semibold leading-[1.2] text-center text-[#528BFD] mb-6">
                     {translations.skills.title}
@@ -60,7 +92,7 @@ export function SkillsView({ translations, onClick }: Props) {
                             variant="secondary"
                             size="lg"
                             className="w-full md:w-auto text-white font-extrabold text-lg sm:text-xl border border-[#528BFD] rounded-lg px-6 py-3"
-                            onClick={() => onClick("contact") }
+                            onClick={() => onClick("contact")}
                         >
                             {translations.skills.contact}
                         </Button>

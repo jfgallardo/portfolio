@@ -43,8 +43,6 @@ export default function ClientLandingView({ menuItems, translations }: Props) {
 
 
   const handleClick = (item: string) => {
-    console.log('handleClick', item)
-    
     const element = document.getElementById(item);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
