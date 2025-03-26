@@ -5,6 +5,7 @@
 ## 📌 Descripción
 
 Este es un portafolio web desarrollado en ⚛️ React, diseñado para mostrar proyectos 💻, habilidades 🔧 y experiencia profesional 🌍 de manera moderna y atractiva.
+🌎 Disponible en 3 idiomas: Español, Inglés y Portugués.
 
 ## 🚀 Características
 
