@@ -1,22 +1,24 @@
-import Image from 'next/image';
-import Photo from '@/public/images/3.png'
-import Button from '@/components/button/button';
-import { Dictionary } from '@/types/types';
-import { useEffect, useRef, useState } from 'react';
-
+import Image from "next/image";
+import Photo from "@/public/images/3.png";
+import Button from "@/components/button/button";
+import { Dictionary } from "@/types/types";
+import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
 
 type Props = {
-  translations: Dictionary
+  translations: Dictionary;
 };
 
 export default function AboutView({ translations }: Props) {
-
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
 
   const downloadCurriculum = () => {
-    window.open('https://drive.google.com/file/d/1bFsJWfaguWMmWTyYWI5AbzTVajnPSFFp/view?usp=drivesdk', '_blank');
-  }
+    window.open(
+      "https://drive.google.com/file/d/1Ntg6PztzGOdeVJGavBDPLaDraKHmOg3V/view?usp=drive_link",
+      "_blank"
+    );
+  };
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -46,9 +48,12 @@ export default function AboutView({ translations }: Props) {
       id="about"
       className={`flex flex-col items-center p-8 bg-[#080922] w-full`}
     >
-      <div ref={sectionRef}
-        className={`w-full max-w-[1400px] transition-transform duration-1000 transform ${isVisible ? "opacity-100 translate-y-0" : "translate-y-16"
-          }`} >
+      <div
+        ref={sectionRef}
+        className={`w-full max-w-[1400px] transition-transform duration-1000 transform ${
+          isVisible ? "opacity-100 translate-y-0" : "translate-y-16"
+        }`}
+      >
         {/* Título */}
         <h1 className="text-[28px] sm:text-[36px] md:text-[48px] font-semibold leading-[1.2] text-center text-[#528BFD] mb-6">
           {translations.about.title}
@@ -67,9 +72,7 @@ export default function AboutView({ translations }: Props) {
           </div>
 
           {/* Información de contacto */}
-          <div
-            className="flex flex-col items-center md:items-start w-full md:w-[468px] text-[#528BFD] gap-6"
-          >
+          <div className="flex flex-col items-center md:items-start w-full md:w-[468px] text-[#528BFD] gap-6">
             <p className="font-sans text-[24px] sm:text-[28px] md:text-[32px] font-semibold text-left">
               {translations.about.greeting}
             </p>
@@ -93,7 +96,7 @@ export default function AboutView({ translations }: Props) {
                   {translations.about.phone}
                 </label>
                 <p className="font-sans text-sm text-left text-white">
-                  +55(62) 983441759
+                  +55(61) 991727146
                 </p>
               </div>
 
@@ -111,7 +114,12 @@ export default function AboutView({ translations }: Props) {
                   {translations.about.linkedin}
                 </label>
                 <p className="font-sans text-sm text-left text-white">
-                  julio-fuentes-gallardo-b06a0a221
+                  <Link
+                    href="https://www.linkedin.com/in/julio-fuentes-gallardo-705bb0145"
+                    target="_blank"
+                  >
+                    J Gallardo.
+                  </Link>
                 </p>
               </div>
             </div>
@@ -129,6 +137,5 @@ export default function AboutView({ translations }: Props) {
         </div>
       </div>
     </div>
-
   );
 }
